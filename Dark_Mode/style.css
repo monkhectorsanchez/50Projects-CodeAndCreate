@@ -16,6 +16,10 @@ html {
   place-items: center;
 }
 
+.container.dark {
+  background-color: #262626;
+}
+
 .toggle {
   width: 6rem;
   height: 6rem;
@@ -29,9 +33,17 @@ html {
   cursor: pointer;
 }
 
+.container.dark .toggle {
+  background-color: #464646;
+}
+
 .toggle i {
   font-size: 4rem;
   color: #777;
+}
+
+.container.dark .toggle i {
+  color: #ddd;
 }
 
 .card {
@@ -41,6 +53,10 @@ html {
   position: relative;
   display: flex;
   box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.container.dark .card {
+  background-color: #353535;
 }
 
 .card-map {
@@ -61,6 +77,10 @@ html {
   justify-content: space-around;
   color: #777;
   z-index: 10;
+}
+
+.container.dark .card-left {
+  color: #ccc;
 }
 
 .card-type {
