@@ -58,6 +58,12 @@ html {
   perspective: 150rem;
 }
 
+.active.box {
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
 .box {
   transform-style: preserve-3d;
   transform: rotateY(45deg) rotateX(30deg);
@@ -117,6 +123,12 @@ html {
   left: -21rem;
   top: 14rem;
   animation: boxAnim 100s -60s infinite linear;
+}
+
+.active.box div {
+  width: 16rem;
+  height: 16rem;
+  transition: all 0.2s 0.5s ease-in-out;
 }
 
 .box div {
@@ -185,5 +197,31 @@ html {
 
 .left-side {
   transform: rotateY(90deg) translateX(-3.5rem);
+  transform-origin: left;
+}
+
+.active .top-side {
+  transform: rotateX(90deg) translateZ(8rem);
+}
+
+.active .bottom-side {
+  transform: rotateX(90deg) translateZ(-8rem);
+}
+
+.active .front-side {
+  transform: translateZ(8rem);
+}
+
+.active .back-side {
+  transform: translateZ(-8rem);
+}
+
+.active .right-side {
+  transform: rotateY(-90deg) translateX(8rem);
+  transform-origin: right;
+}
+
+.active .left-side {
+  transform: rotateY(90deg) translateX(-8rem);
   transform-origin: left;
 }
