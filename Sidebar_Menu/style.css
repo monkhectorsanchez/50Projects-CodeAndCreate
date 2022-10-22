@@ -29,6 +29,50 @@ html {
   box-sizing: border-box;
 }
 
+.hamburger-menu {
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.line {
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: var(--secondary-color);
+  position: absolute;
+  transform-origin: left;
+}
+
+.line-1 {
+  top: 1.2rem;
+}
+
+.line-2 {
+  top: 1.8rem;
+}
+
+.line-3 {
+  top: 2.4rem;
+}
+
+.change .line-1 {
+  top: 2.4rem;
+  transform: rotate(-40deg) translateY(0.3rem);
+}
+
+.change .line-2 {
+  opacity: 0;
+}
+
+.change .line-3 {
+  top: 1.2rem;
+  transform: rotate(40deg) translateY(-0.3rem);
+}
+
 .card {
   display: flex;
 }
@@ -168,6 +212,10 @@ html {
   transform: translateX(-1rem);
 }
 
+.bottom-list-link {
+  position: relative;
+}
+
 .bottom-list-link i {
   font-size: 1.6rem;
   color: var(--secondary-color);
@@ -176,6 +224,34 @@ html {
 
 .bottom-list-link:hover i {
   color: var(--active-icon-color);
+}
+
+.bottom-list-link span {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  position: absolute;
+  top: -100%;
+  right: -50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-list-item:nth-child(1) span {
+  background-color: #cfa012;
+}
+
+.bottom-list-item:nth-child(2) span {
+  background-color: #54b154;
+}
+
+.bottom-list-item:nth-child(3) span {
+  background-color: #e22727;
 }
 
 .main-section {
