@@ -28,16 +28,29 @@ html {
   left: -15vw;
   padding: 1.5rem 1rem;
   box-sizing: border-box;
+  z-index: 100;
+  transition: left 0.2s;
+}
+
+.change .sidebar {
+  left: 0;
 }
 
 .hamburger-menu {
   width: 3.5rem;
   height: 3.5rem;
+  background-color: var(--main-bg-color);
+  border-bottom-right-radius: 1rem;
   position: absolute;
-  right: 0;
+  right: -3.5rem;
   top: 0;
   padding: 0.5rem;
   box-sizing: border-box;
+  transition: right 0.3s 0.3s;
+}
+
+.change .hamburger-menu {
+  right: 0;
 }
 
 .line {
@@ -171,14 +184,30 @@ html {
   color: var(--active-icon-color);
 }
 
+.change.nav-link i:first-child {
+  color: var(--active-icon-color);
+}
+
 .nav-link i:last-child {
   margin-right: 2.5rem;
   font-size: 1.6rem;
+  transition: transform 0.5s;
+}
+
+.change > i:last-child {
+  transform: rotate(90deg);
 }
 
 .sub-nav-list {
   width: 90%;
   margin-left: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.change.sub-nav-list {
+  max-height: 10rem;
 }
 
 .sub-nav-item {
@@ -259,9 +288,15 @@ html {
 }
 
 .main-section {
-  width: 85vw;
+  width: 100vw;
   position: relative;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.change .main-section {
   left: 15vw;
+  width: 85vw;
 }
 
 .header {
@@ -279,4 +314,72 @@ html {
   font-size: 12rem;
   color: #fff;
   letter-spacing: 1rem;
+}
+
+@media(max-width: 1500px) {
+  .sidebar {
+    width: 20vw;
+    left: -20vw;
+  }
+
+  .change .main-section {
+    left: 20vw;
+    width: 80vw;
+  }
+}
+
+@media(max-width: 1200px) {
+  .sidebar {
+    width: 25vw;
+    left: -25vw;
+  }
+
+  .change .main-section {
+    left: 25vw;
+    width: 75vw;
+  }
+}
+
+@media(max-width: 900px) {
+  .sidebar {
+    width: 30vw;
+    left: -30vw;
+  }
+
+  .change .main-section {
+    left: 30vw;
+    width: 70vw;
+  }
+
+  .heading {
+    font-size: 8rem;
+  }
+}
+
+@media(max-width: 700px) {
+  .sidebar {
+    width: 50vw;
+    left: -50vw;
+  }
+
+  .change .main-section {
+    left: 50vw;
+    width: 50vw;
+  }
+
+  .heading {
+    display: none;
+  }
+}
+
+@media(max-width: 400px) {
+  .sidebar {
+    width: 100vw;
+    left: -100vw;
+  }
+
+  .change .main-section {
+    left: 100vw;
+    width: 0;
+  }
 }
