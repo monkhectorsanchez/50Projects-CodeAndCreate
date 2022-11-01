@@ -26,6 +26,7 @@ html {
   align-items: center;
   border-radius: 50%;
   transform: scale(0) rotate(-180deg);
+  transition: transform 0.5s;
 }
 
 .change .navbar {
@@ -89,4 +90,9 @@ html {
 .navbar-btn i {
   font-size: 2rem;
   color: #fff;
+  transition: transform 0.5s;
+}
+
+.change .navbar-btn i {
+  transform: rotate(45deg);
 }
