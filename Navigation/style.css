@@ -41,6 +41,7 @@ html {
   height: 1rem;
   background-color: #fff;
   border-radius: 50%;
+  transition: all 0.3s;
 }
 
 .change .dot-1 {
@@ -62,18 +63,32 @@ html {
 }
 
 .nav-menu {
-  width: 46rem;
+  width: 0;
   height: 3.5rem;
   background-color: #25ac78;
   padding: 2rem 3rem;
   border-radius: 5rem;
   box-shadow: 0 1rem 3rem rgba(37, 172, 120, 0.4);
+  transition: width 0.3s;
+}
+
+.change .nav-menu {
+  width: 46rem;
 }
 
 .nav-menu-link {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.change .nav-menu-link {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s 0.3s;
 }
 
 .nav-menu-link:nth-child(1) {
