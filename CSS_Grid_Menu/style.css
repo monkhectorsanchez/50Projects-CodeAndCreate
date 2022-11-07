@@ -96,6 +96,10 @@ html {
   list-style: none;
 }
 
+.nav-menu-item:nth-child(1) {
+  
+}
+
 .nav-menu-link {
   text-decoration: none;
   font-family: 'Josefin Slab', serif;
