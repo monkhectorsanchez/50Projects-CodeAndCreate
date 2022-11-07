@@ -15,6 +15,7 @@ html {
   left: 3.5rem;
   cursor: pointer;
   z-index: 100;
+  overflow: hidden;
 }
 
 .lines {
@@ -33,6 +34,22 @@ html {
   border-radius: 0.2rem;
 }
 
+.change .line {
+  transform: translateX(120%);
+}
+
+.line-1 {
+  transition: transform 0.5s 0.1s;
+}
+
+.line-2 {
+  transition: transform 0.5s 0.3s;
+}
+
+.line-3 {
+  transition: transform 0.5s 0.5s;
+}
+
 .x-btn {
   position: absolute;
   top: 50%;
@@ -40,6 +57,13 @@ html {
   transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
+  transition: all 0.5s;
+}
+
+.change .x-btn {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s 1.3s;
 }
 
 .x-line {
@@ -66,6 +90,13 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s;
+}
+
+.change .header {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s 0.7s;
 }
 
 .banner h1 {
@@ -108,6 +139,12 @@ html {
   visibility: hidden;
 }
 
+.change .navigation {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s 0.7s;
+}
+
 .nav-menu {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -119,6 +156,7 @@ html {
 
 .nav-menu-item {
   list-style: none;
+  overflow: hidden;
 }
 
 .nav-menu-item:nth-child(1) {
@@ -190,4 +228,10 @@ html {
   justify-content: center;
   align-items: center;
   height: 100%;
+  transform: translateX(-105%);
+}
+
+.change .nav-menu-link {
+  transform: translateX(0);
+  transition: transform 0.7s 1s;
 }
