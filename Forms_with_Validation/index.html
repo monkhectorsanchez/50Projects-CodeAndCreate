@@ -5,9 +5,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Forms with Validation</title>
+  <title>SignIn & SignUp</title>
 </head>
 <body>
-  
+  <div class="container">
+    <h1 class="heading">
+      <span class="heading-span-1">Sing</span><span class="heading-span-2">In</span>
+    </h1>
+    <div class="buttons">
+      <button class="signin-btn">SignIn</button>
+      <button class="signup-btn">SignUp</button>
+    </div>
+    <div class="form-bg">
+      <form class="form sign-in">
+        <div class="form-input-wrapper">
+          <input type="text" class="form-input" id="username" placeholder="Your Name">
+          <p class="message">Error Message</p>
+        </div>
+        <div class="form-input-wrapper">
+          <input type="text" class="form-input" id="email" placeholder="Email Address">
+          <p class="message">Error Message</p>
+        </div>
+        <div class="form-input-wrapper">
+          <input type="password" class="form-input" id="password" placeholder="Password">
+          <p class="message">Error Message</p>
+        </div>
+        <div class="form-input-wrapper">
+          <input type="password" class="form-input" id="password2" placeholder="Confirm Password">
+          <p class="message">Error Message</p>
+        </div>
+        <input type="submit" value="Submit" class="form-btn">
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
