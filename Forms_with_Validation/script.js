@@ -7,6 +7,7 @@ document.querySelector('.signup-btn').addEventListener('click', () => {
   setTimeout(() => {
     headingSpan2.textContent = 'Up'
   }, 200)
+  form.className = 'form sign-up'
 })
 
 document.querySelector('.signin-btn').addEventListener('click', () => {
@@ -14,6 +15,7 @@ document.querySelector('.signin-btn').addEventListener('click', () => {
   setTimeout(() => {
     headingSpan2.textContent = 'In'
   }, 200)
+  form.className = 'form sign-in'
 })
 
 const username = document.getElementById('username')
@@ -27,17 +29,31 @@ const error = (input, message) => {
   inputWrapper.querySelector('.message').textContent = message
 }
 
+const success = (input) => {
+  const inputWrapper = input.parentElement
+  inputWrapper.className = 'form-input-wrapper success'
+}
+
 const checkRequiredFields = (inputArr) => {
   inputArr.forEach((input) => {
     if(input.value.trim() === '') {
-      error(input, `${input.id} is required`)
+      if(input.id === 'password2') {
+        error(input, 'Password confirmation is required')
+      } else {
+        error(input, `${input.id} is required`)
+      }
     } else {
-      // Success
+      success(input)
     }
   })
 }
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
-  checkRequiredFields([username, email, password, password2])
+
+  if(form.classList[1] === 'sign-up') {
+    checkRequiredFields([username, email, password, password2])
+  } else {
+    checkRequiredFields([email, password])
+  }
 })
