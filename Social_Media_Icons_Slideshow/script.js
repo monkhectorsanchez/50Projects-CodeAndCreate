@@ -4,8 +4,22 @@ setInterval(() => {
 
   const firstIcon = slideshow.firstElementChild
 
-  slideshow.removeChild(firstIcon)
+  firstIcon.classList.add('faded-out')
 
-  slideshow.appendChild(firstIcon)
+  const thirdIcon = slideshow.children[3]
+
+  thirdIcon.classList.add('light')
+
+  thirdIcon.previousElementSibling.classList.remove('light')
+
+  setTimeout(() => {
+    slideshow.removeChild(firstIcon)
+
+    slideshow.appendChild(firstIcon)
+
+    setTimeout(() => {
+      firstIcon.classList.remove('faded-out')
+    }, 500)
+  }, 500)
 
 }, 3000)
