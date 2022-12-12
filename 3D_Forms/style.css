@@ -15,12 +15,15 @@ html {
   height: 100vh;
   background: linear-gradient(rgba(31, 7, 7, 0.7), rgba(0, 0, 0, 0.7)), url(images/bg.png) center no-repeat;
   background-size: cover;
+  perspective: 100rem;
 }
 
 .forms-wrapper {
+  transform-style: preserve-3d;
   position: absolute;
   top: calc(50% - 17.5rem);
   left: calc(50% - 25rem);
+  transform: rotateY(-10deg);
 }
 
 .forms-wrapper form {
@@ -33,6 +36,10 @@ html {
   align-items: center;
   box-shadow: 0.1rem 0.1rem 0.1rem #ccc inset, -0.1rem -0.1rem 0.1rem #ccc inset;
   position: absolute;
+}
+
+.signup-form {
+  transform: rotateY(270deg) translateZ(25rem) translateX(-25rem);
 }
 
 form a {
