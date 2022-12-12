@@ -19,9 +19,8 @@ html {
 
 .forms-wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: calc(50% - 17.5rem);
+  left: calc(50% - 25rem);
 }
 
 .forms-wrapper form {
@@ -33,19 +32,29 @@ html {
   justify-content: space-around;
   align-items: center;
   box-shadow: 0.1rem 0.1rem 0.1rem #ccc inset, -0.1rem -0.1rem 0.1rem #ccc inset;
+  position: absolute;
 }
 
 form a {
   position: absolute;
   top: 2rem;
-  left: 2rem;
   background-color: #fff;
   font-weight: 600;
   text-transform: uppercase;
   color: rgba(40, 114, 108);
   letter-spacing: 0.2rem;
+}
+
+.signup-btn {
+  left: 2rem;
   padding: 0.5rem 1rem 0.5rem 3rem;
   border-radius: 100% 0.5rem 0.5rem 100%;
+}
+
+.signin-btn {
+  right: 2rem;
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  border-radius: 0.5rem 100% 100% 0.5rem;
 }
 
 form h2 {
