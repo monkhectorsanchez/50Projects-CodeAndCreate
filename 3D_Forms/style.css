@@ -56,5 +56,32 @@ form h2 {
 }
 
 .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
+.input-wrapper input {
+  width: 25rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  background-color: transparent;
+  border: 0.1rem solid #fff;
+  border-radius: 5rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  outline: none;
+}
+
+.input-wrapper input::placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+.input-wrapper input[type="submit"] {
+  background-color: #fff;
+  color: rgba(40, 114, 108);
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
 }
