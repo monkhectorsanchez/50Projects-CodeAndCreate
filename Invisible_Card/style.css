@@ -47,3 +47,45 @@
   padding: 10px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
+
+.card-heading {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 3px;
+  background: linear-gradient(#0a9751, #06831b);
+  width: 70%;
+  text-align: center;
+  padding: 5px 0;
+  transform: perspective(1000px) skewX(-20deg) rotateY(40deg);
+}
+
+.card-paragraph {
+  font-size: 18px;
+  color: #ddd;
+  width: 85%;
+  text-align: justify;
+  position: relative;
+}
+
+.card-paragraph::first-letter {
+  margin-left: 40px;
+}
+
+.card-paragraph i {
+  color: #fff;
+  font-size: 25px;
+  font-style: italic;
+  position: absolute;
+}
+
+.card-paragraph i:first-child {
+  top: -10%;
+}
+
+.card-paragraph i:last-child {
+  bottom: -10%;
+  margin-left: 10px;
+}
