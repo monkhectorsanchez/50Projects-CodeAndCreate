@@ -21,6 +21,22 @@
   text-transform: uppercase;
   letter-spacing: 5px;
   text-align: center;
+  white-space: pre-wrap;
+}
+
+.heading::after {
+  content: '';
+  width: 5px;
+  height: 55px;
+  background-color: #fff;
+  position: absolute;
+  animation: blinking 1s 3s infinite;
+}
+
+@keyframes blinking {
+  0% {background-color: #fff}
+  50% {background-color: transparent}
+  100% {background-color: #fff}
 }
 
 .cards-wrapper {
