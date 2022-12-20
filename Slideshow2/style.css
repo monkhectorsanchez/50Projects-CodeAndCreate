@@ -91,7 +91,31 @@
 }
 
 .slideshow-wrapper {
-  
+  overflow: hidden;
+}
+
+.slideshow {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  position: relative;
+  animation: slideshow 24s infinite;
+}
+
+@keyframes slideshow {
+  0% {left: 0}
+  10% {left: 10}
+  15% {left: -100%}
+  25% {left: -100%}
+  30% {left: -200%}
+  40% {left: -200%}
+  45% {left: -300%}
+  55% {left: -300%}
+  60% {left: -200%}
+  70% {left: -200%}
+  75% {left: -100%}
+  85% {left: -100%}
+  90% {left: 0}
 }
 
 .slide {
@@ -100,22 +124,22 @@
 }
 
 .slide:nth-child(1) {
-  background: url(images/london.jpeg) center no-repeat;
+  background: linear-gradient(100deg, rgba(38, 38, 38, 1), rgba(38, 38, 38, 0.8), transparent), url(images/london.jpeg) center no-repeat;
   background-size: cover;
 }
 
 .slide:nth-child(2) {
-  background: url(images/new-york.jpeg) center no-repeat;
+  background: linear-gradient(100deg, rgba(38, 38, 38, 1), rgba(38, 38, 38, 0.8), transparent), url(images/new-york.jpeg) center no-repeat;
   background-size: cover;
 }
 
 .slide:nth-child(3) {
-  background: url(images/rome.jpg) center no-repeat;
+  background: linear-gradient(100deg, rgba(38, 38, 38, 1), rgba(38, 38, 38, 0.8), transparent), url(images/rome.jpg) center no-repeat;
   background-size: cover;
 }
 
 .slide:nth-child(4) {
-  background: url(images/tokyo.jpg) center no-repeat;
+  background: linear-gradient(100deg, rgba(38, 38, 38, 1), rgba(38, 38, 38, 0.8), transparent), url(images/tokyo.jpg) center no-repeat;
   background-size: cover;
 }
 
