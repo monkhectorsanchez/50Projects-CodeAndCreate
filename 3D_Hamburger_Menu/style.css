@@ -20,6 +20,7 @@
   position: fixed;
   top: 20px;
   left: 50px;
+  z-index: 100;
 }
 
 .logo img {
@@ -44,10 +45,24 @@
   height: 5px;
   background-color: #16c3cf;
   border-radius: 25px;
+  transform-origin: right;
+  transition: transform 0.5s;
 }
 
 .line-2 {
   height: 3px;
+}
+
+.change .line-1 {
+  transform: rotateZ(-45deg);
+}
+
+.change .line-2 {
+  transform: translate(5px, 20px);
+}
+
+.change .line-3 {
+  transform: rotateZ(45deg);
 }
 
 .btn-wrapper {
@@ -110,8 +125,13 @@
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),  url(images/nav-bg.jpeg) no-repeat 50% 0;
   background-size: cover;
   position: fixed;
-  top: 0;
+  top: -15vh;
   z-index: 50;
+  transition: top 0.4s;
+}
+
+.change .top-nav {
+  top: 0;
 }
 
 .nav-list {
@@ -166,6 +186,11 @@
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),  url(images/nav-bg.jpeg) no-repeat 50% -15vh;
   background-size: cover;
   position: fixed;
+  bottom: -85vh;
+  transition: bottom 0.4s;
+}
+
+.change .bottom-nav {
   bottom: 0;
 }
 
