@@ -180,7 +180,44 @@
   justify-content: space-between;
 }
 
+.icon-link {
+  width: 200px;
+  height: 200px;
+  border: 8px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.icon-link::before {
+  content: '';
+  height: 30px;
+  width: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+}
+
+.icon-link::after {
+  content: '';
+  height: 30px;
+  width: 5px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
 .icon-link i {
   color: #fff;
   font-size: 60px;
+  width: 150px;
+  height: 150px;
+  background-color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #fff;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
